@@ -11,7 +11,7 @@ const listeners = new Set();
 function getAudio() {
   if (!audio) {
     audio = new Audio(
-      "/public/alex-morgan-wedding-instrumental-vow-exchange-578502.mp3",
+      "/alex-morgan-wedding-instrumental-vow-exchange-578502.mp3",
     );
     audio.loop = true;
     audio.volume = 0;
