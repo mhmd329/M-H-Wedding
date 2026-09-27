@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { playMusic } from "./music";
+import { playMusic } from "./Music";
 import MusicToggle from "./MusicToggle";
 
 /**
@@ -115,7 +115,7 @@ function WeddingCard({ onOpen }) {
 
           {/* Osmosis bloom — diffuses outward from the seal on open */}
           <div
-            className={`pointer-events-none absolute left-1/2 top-[51%] z-[8] h-15.5 w-15.5 -translate-x-1/2 -translate-y-1/2 rounded-full ${
+            className={`pointer-events-none absolute left-1/2 top-[51%] z-8 h-15.5 w-15.5 -translate-x-1/2 -translate-y-1/2 rounded-full ${
               isOpening ? "animate-osmosis-bloom" : "opacity-0"
             }`}
             style={{
@@ -126,9 +126,9 @@ function WeddingCard({ onOpen }) {
 
           {/* Letter */}
           <div
-            className={`absolute inset-[8%] z-[2] flex flex-col items-center justify-center rounded-xl border border-[#C9A15D]/25 bg-[#2E0F1C] text-[#F6EFE3] transition-all duration-800 motion-reduce:transition-none ${
+            className={`absolute inset-[8%] z-2 flex flex-col items-center justify-center rounded-xl border border-[#C9A15D]/25 bg-[#2E0F1C] text-[#F6EFE3] transition-all duration-800 motion-reduce:transition-none ${
               isOpening ?
-                "-translate-y-[25%] scale-[0.95] opacity-0 blur-sm"
+                "translate-y-[-25%] scale-[0.95] opacity-0 blur-sm"
               : "blur-0"
             }`}>
             <span className='font-serif text-4xl tracking-[2px]'>محمد</span>
@@ -140,7 +140,7 @@ function WeddingCard({ onOpen }) {
 
           {/* Flap */}
           <div
-            className='absolute left-0 top-0 z-[5] h-[55%] w-full bg-[#45182A] transition-transform duration-[1050ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none'
+            className='absolute left-0 top-0 z-5 h-[55%] w-full bg-[#45182A] transition-transform duration-1050 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none'
             style={{
               clipPath: "polygon(0 0, 100% 0, 50% 100%)",
               transformOrigin: "50% 0%",
@@ -152,7 +152,7 @@ function WeddingCard({ onOpen }) {
 
           {/* Front */}
           <div
-            className={`absolute inset-0 z-[4] bg-[#45182A]/90 transition-all duration-800 motion-reduce:transition-none ${
+            className={`absolute inset-0 z-4 bg-[#45182A]/90 transition-all duration-800 motion-reduce:transition-none ${
               isOpening ? "translate-y-[28%] opacity-0" : ""
             }`}
             style={{
