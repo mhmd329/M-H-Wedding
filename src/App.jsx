@@ -3,15 +3,11 @@ import WeddingCard from "./components/WeddingCard";
 import WeddingInvitation from "./components/WeddingInvitation";
 
 function App() {
-  const [opened, setOpened] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
-  return (
-    <main className='min-h-screen overflow-hidden bg-[#F8F1E7]'>
-      {!opened ?
-        <WeddingCard onOpen={() => setOpened(true)} />
-      : <WeddingInvitation />}
-    </main>
-  );
+  return isOpened ?
+      <WeddingInvitation />
+    : <WeddingCard onOpen={() => setIsOpened(true)} />;
 }
 
 export default App;
